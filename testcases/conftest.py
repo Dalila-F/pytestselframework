@@ -3,7 +3,6 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import pytest
-# import pytest_html
 from pytest_metadata.plugin import metadata_key
 
 @pytest.fixture()
@@ -11,9 +10,9 @@ def setup(browser):
     if browser=='chrome':
         driver=webdriver.Chrome()
         print("Launching chrome browser.........")
-    elif browser=='firefox':
-        driver = webdriver.Firefox()
-        print("Launching firefox browser.........")
+    elif browser=='edge':
+        driver = webdriver.Edge()
+        print("Launching edge browser.........")
     else:
         driver = driver=webdriver.Chrome()
     return driver
